@@ -1,0 +1,84 @@
+:root {
+    --main-theme-color:rgb(230, 255, 204,0.5);
+}
+
+*,*:before,*:after{
+ 
+    box-sizing: border-box;
+    margin:0px;
+
+}
+
+body {
+    display: flex;
+    flex-flow:column;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+
+}
+.full_body {
+
+    display: flex;
+    flex-flow:column;
+
+    width:350px;
+    height:100vh;;
+    border:1px solid lightgrey;
+    position:relative;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    .full_body{
+        width:100vw;
+        height:100vh;
+    }
+  }
+.complete_screen {
+    height:50%;
+    background-color:var(--main-theme-color);
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+#screen {
+    font-family:sans-serif;
+    color:black;
+    font-size: 3em;
+    text-align-last: right;
+    margin-right:5px;
+}
+#result {
+font-family:sans-serif;
+    color:black;
+    font-size: 2em;
+    text-align-last: right;
+    margin-right:5px;
+}
+.special {
+  background-color: #ffff66;
+}
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    height: 50%;
+   
+}
+.numpad button{
+    text-decoration: none;
+    background-color: rgba(230, 255, 204,0.5);
+    border:none;
+    border-radius: 30px;
+    margin:5px;
+    font-size:2em;
+    width:auto;
+    transition: border-radius 0.3s;
+}
+.numpad button:active{
+  background-color:rgba(230, 255, 204,1);
+  border-radius:10px;
+}
