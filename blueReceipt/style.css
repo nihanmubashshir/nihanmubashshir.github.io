@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  height: 100vh;
+  font-size: 0.9rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.section_1 {
+  width: 50vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ebeef7;
+}
+
+.section_1 .logo {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  margin-top: 20px;
+}
+
+.section_1 .receipt {
+  width: 25vw;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+}
+
+.section_1 .receipt .amount {
+  margin: 10px 10px 10px 10px;
+  margin-top: 10px;
+}
+
+.section_1 .receipt .amount p:nth-child(1) {
+  color: grey;
+}
+
+.section_1 .receipt .amount p:nth-child(2) {
+  font-size: 2rem;
+}
+
+.section_1 .receipt .item_name {
+  background-color: #3a6bfb;
+  border-radius: 5px;
+  color: white;
+  margin: 10px 10px 10px 10px;
+  padding: 20px;
+}
+
+.section_1 .receipt .item_name h2 {
+  padding: 5px;
+}
+
+.section_1 .receipt .item_name p {
+  padding: 5px;
+}
+
+.section_1 table {
+  margin: 10px 10px 10px 10px;
+}
+
+.section_1 table caption {
+  text-align: left;
+  font-weight: bold;
+}
+
+.section_1 table td {
+  text-align: left;
+  padding: 5px;
+  padding-left: 0;
+}
+
+.section_1 table tr:last-child {
+  color: blue;
+}
+
+.section_1 table tr:first-child span {
+  font-size: small;
+  color: grey;
+}
+
+.section_1 .footer_receipt {
+  background-color: #ebeef7;
+  margin: 10px 10px 10px 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: small;
+}
+
+.section_1 .footer_receipt p:last-child {
+  color: grey;
+}
+
+.section_2 ul {
+  list-style-type: none;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,137 @@
+$theme_color :#3a6bfb;
+$background : #ebeef7;
+$font_size_default:0.9rem;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+
+*{
+    // border:1px solid grey;
+    margin:0px;
+    padding:0px;
+}
+body {
+    background-color: white;
+    display:flex;
+    flex-flow:row;
+    height: 100vh;
+    font-size: $font_size_default;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.section_1{
+    width:50vw;
+    height:100vh;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+    background-color: $background;
+.logo {
+    align-self: start;
+    grid-column-start: 3;
+    margin-top:20px;
+}
+
+$margin_internal : 10px 10px 10px 10px;
+.receipt {
+    width:25vw;
+    height:70vh;
+    display:flex;
+    flex-flow:column;
+    justify-content: space-around;
+   
+    background-color: white;
+    border-radius: 5px;
+    padding:10px;
+    grid-column-start:4;
+    
+
+    .amount {
+       margin:$margin_internal;
+       margin-top: 10px;
+
+        p:nth-child(1){
+            color:grey;
+        }
+        p:nth-child(2){
+            font-size: 2rem;;
+        }
+    }
+    
+    .item_name {
+        background-color: $theme_color;
+   
+        border-radius:5px;
+        color:white;
+        margin:$margin_internal;
+        padding:20px;
+    
+        h2{
+          
+            padding:5px;
+          
+        
+        }
+        p{
+          
+            padding:5px;
+        }
+    }
+    
+
+}
+
+table {
+    margin:$margin_internal;
+
+    caption{
+        text-align: left;
+        font-weight:bold;
+    }
+
+    td{
+        text-align: left;
+        padding: 5px;
+        padding-left: 0;
+        
+    }
+
+    tr:last-child{
+        color:blue;
+    }
+    tr:first-child{
+
+        span{
+            font-size: small;
+            color:grey
+        }
+    }
+}
+
+.footer_receipt {
+    background-color: $background;
+    margin:$margin_internal;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding:5px;
+    font-size: small;
+
+    p:last-child{
+        color:grey
+    }
+
+
+}
+
+}
+// section 2
+
+
+.section_2 {
+    ul {
+        list-style-type: none;
+    }
+
+    
+}
