@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BlueRecipt</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="section_1">
@@ -42,6 +42,7 @@
     <!-- section 2 -->
 
     <div class="section_2">
+        <div class="checkout">
         <div class="checkout_steps">
             <ul>
                 <li><span>1</span> Info</li>
@@ -50,20 +51,32 @@
             </ul>
         </div>
         <h2>Information</h2>
-        <div class="Information">
+        <div class="information">
             <form action="">
 
-                <label for="name">Name *</label>
-                <input type="text" id="name" placeholder="Full Name">   
+                <label for="name" class="required">Name</label><br>
+                <input type="text" id="name" placeholder="Full Name" required>  <br>
                 
-                <label for="email">Email *</label>
-                <input type="text" id="email" placeholder="username@gmail_hostname.com">
+                <label for="email" class="required">Email</label><br>
+                <input type="text" id="email" placeholder="username@gmail_hostname.com"><br>
 
-                <label for="phone">Phone *</label>
+                <label for="phone" class="required">Phone</label><br>
 
                 <input type="tel">
-            </form>
+                
+                <div class="checkbox"><input type="checkbox" id="order_bump"><label for="order_bump">Order Bump <br><span>$49.99</span></label>
+                </div> 
+                <p>One time OfferL Want our advanced funnel training? Learn the 9 secret funnels and how you can use them to double..</p>
+                <div class="checkbox no_border"><input type="checkbox" id="click_to_remember"><label for="click_to_remember">Remember Information & Sign Up for Tests<br><span>Click continue to confirm</span></label>
+                </div> 
+
+
+                <input type="submit" value="Continue">
+                </form>
         </div>
+
+        
+    </div>
     </div>
 </body>
 </html>

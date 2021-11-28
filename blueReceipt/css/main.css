@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+.section_2 .checkout .information input:not(input[type="checkbox"]) {
+  border: 1px solid #e7eaf4;
+  border-radius: 5px;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -135,7 +140,6 @@ body {
 
 .section_2 .checkout {
   width: 25vw;
-  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,6 +149,7 @@ body {
           flex-flow: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  vertical-align: middle;
   -ms-grid-column: 2;
       grid-column-start: 2;
   padding: 10px;
@@ -152,6 +157,16 @@ body {
 
 .section_2 .checkout .checkout_steps {
   border-bottom: 1px solid lightgrey;
+}
+
+.section_2 .checkout .checkout_steps span {
+  background-color: #3a6bfb;
+  display: inline-block;
+  width: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
 }
 
 .section_2 .checkout h2 {
@@ -177,13 +192,79 @@ body {
   font-weight: bold;
 }
 
-.section_2 .checkout .information input {
+.section_2 .checkout .information input:not(input[type="checkbox"]) {
   height: 2rem;
   margin: 5px 0px 15px 0px;
   width: 100%;
-  border: none;
-  -webkit-box-shadow: 0px 0px 1px grey;
-          box-shadow: 0px 0px 1px grey;
-  border-radius: 5px;
 }
-/*# sourceMappingURL=style.css.map */
+
+.section_2 .checkout .information .required::after {
+  content: " *";
+  color: #3a6bfb;
+}
+
+.section_2 .checkout .information input::-webkit-input-placeholder {
+  color: grey;
+  padding-left: 1rem;
+}
+
+.section_2 .checkout .information input:-ms-input-placeholder {
+  color: grey;
+  padding-left: 1rem;
+}
+
+.section_2 .checkout .information input::-ms-input-placeholder {
+  color: grey;
+  padding-left: 1rem;
+}
+
+.section_2 .checkout .information input::placeholder {
+  color: grey;
+  padding-left: 1rem;
+}
+
+.section_2 .checkout .information input[type=text]:focus, .section_2 .checkout .information input[type=tel]:focus {
+  outline: none;
+  border: 1px solid #3a6bfb;
+}
+
+.section_2 .checkout .information .checkbox {
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #e7eaf4;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section_2 .checkout .information .checkbox input {
+  margin-right: 10px;
+}
+
+.section_2 .checkout .information .checkbox label {
+  width: 100%;
+}
+
+.section_2 .checkout .information .checkbox span {
+  color: grey;
+}
+
+.section_2 .checkout .information p {
+  color: grey;
+  border: 1px solid #e7eaf4;
+  border-top: none;
+  padding-left: 10px;
+  border-radius: 0 0 5px 5px;
+}
+
+.section_2 .checkout .information .no_border {
+  border: none;
+}
+/*# sourceMappingURL=main.css.map */
