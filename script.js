@@ -1,4 +1,4 @@
-const mainArray = ["calculator/index.html",];
+const mainArray = ["calculator/index.html","blueReceipt/index.html"];
 
 function show_project(name){
 
