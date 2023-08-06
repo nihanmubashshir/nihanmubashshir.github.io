@@ -1,5 +1,4 @@
 ---
-import {asciiArt} from '/ascii.svg'
 ---
 
 <!DOCTYPE html>
@@ -17,17 +16,18 @@ import {asciiArt} from '/ascii.svg'
 		/>
 	</head>
 
-	<body class="max-w-screen max-h-screen bg-[#212121]">
-		<section class=" xl:max-w-[1160px] grid grid-cols-12 gap-5 mx-auto h-full">
-			<div class="col-span-4 md:flex justify-end items-center">
+	<body class="w-screen h-screen bg-[#212121]">
+		<section class="flex justify-center items-center xl:max-w-[1160px] md:grid grid-cols-12 gap-5 mx-auto h-full">
+			<div class="col-span-4 md:flex justify-center items-end flex-col">
 				<h1 class="text-white text-4xl">
 					Note to self.
 				</h1>
+				<a href="/blog" class="text-white hover:underline underline-offset-4">Docs</a>
 
 			</div>
-			<div class="col-span-8 ">
-				<div class="flex py-9 items-center justify-center overflow-hidden">
-					<img src="/ascii.svg" class="object-fit w-full h-full">
+			<div class="hidden md:flex col-span-8  justify-center items-center">
+				<div class=" py-6 overflow-hidden max-w-[500px] mx-auto">
+					<img src="/ascii.svg" class="object-contain">
 				</div>
 
 			</div>
