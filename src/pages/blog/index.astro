@@ -1,0 +1,33 @@
+---
+
+import {getCollection } from 'astro:content';
+const d = await getCollection('blog');
+console.log(d);
+const linkList = d.map((entry)=>{
+    return `${Astro.url}/${entry.slug}`
+})
+
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+</head>
+<body class=" ">
+
+    <section class="bg-white min-h-screen  mx-auto max-w-[1440px] px-5 md:px-14">
+        <div class="font-nextJs">
+            hi
+
+            {linkList.map((link)=>{
+                return <a href={link}>Hi
+                    </a>
+            })}
+        </div>
+    </section>
+    
+</body>
+</html>

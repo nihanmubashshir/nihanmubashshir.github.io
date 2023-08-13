@@ -1,7 +1,5 @@
 ---
 import {getCollection } from 'astro:content';
-import TableOfContent from '../../components/TableOfContent/index.astro';
-
 /**
  * Get all the routes possible
  */
@@ -19,10 +17,20 @@ export async function getStaticPaths(){
 const { entry } = Astro.props;
 const {Content, headings } = await entry.render();
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>article</title>
+</head>
+<body class="p-5 md:py-8 px-10">
 
-<TableOfContent  headings={headings} />
-<div class="px-4 md:px-0">
-<article class="prose font-nextjs leading-[150%] mx-auto">
-	<Content/>
-</article>
-</div>
+
+	<article class="prose font-nextjs leading-[150%] mx-auto ">
+		<Content/>
+	</article>
+	
+	
+</body>
+</html>
