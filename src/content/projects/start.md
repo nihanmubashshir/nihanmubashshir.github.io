@@ -1,17 +1,11 @@
 ---
 
-title: Starting test
+title: ECOM
 ---
 
 
-## MD
-I would like to understand how it works and how it should work in general.
-## Hope I can gain something out of it.
+## ECOM
+This is a learning project where I try to build an entire ecom site from few basic components.
 
-```js
-class system(){
-    cosntructor(){
-        console.log("hi");
-    }
-}
-```
+**Here is list of article related to this**
+1. Project goals
