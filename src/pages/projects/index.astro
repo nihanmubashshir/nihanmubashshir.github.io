@@ -5,7 +5,7 @@ const d = await getCollection("projects");
 
 const linkList = d.map((entry) => {
   return {
-    url: `${Astro.url}/${entry.slug}`,
+    url: `${Astro.url + entry.slug}`,
     title: entry.data?.title || entry.slug
   }
 });
