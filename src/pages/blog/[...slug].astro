@@ -1,28 +1,27 @@
 ---
-import {getCollection } from 'astro:content';
-import TableOfContent from '../../components/TableOfContent/index.astro';
+import { getCollection } from "astro:content";
+import TableOfContent from "../../components/TableOfContent/index.astro";
+import Base from "../../layouts/Base.astro";
 
-/**
- * Get all the routes possible
- */
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("blog");
 
-export async function getStaticPaths(){
-
-	const blogEntries =  await getCollection('projects');
-	
-	return  blogEntries.map((entry)=>{
-		return {
-			params: {slug: entry.slug },props: {entry}
-		}
-	})
+  return blogEntries.map((entry) => {
+    return {
+      params: { slug: entry.slug },
+      props: { entry },
+    };
+  });
 }
 const { entry } = Astro.props;
-const {Content, headings } = await entry.render();
+const { Content, headings } = await entry.render();
 ---
 
-<TableOfContent  headings={headings} />
-<div class="px-4 md:px-0">
-<article class="prose font-nextjs leading-[150%] mx-auto">
-	<Content/>
-</article>
-</div>
+<!-- <TableOfContent  headings={headings} /> -->
+<Base>
+  <div class="px-4 py-5 md:py-12 md:px-0">
+    <article class="prose prose-invert font-nextjs leading-[150%] mx-auto">
+      <Content />
+    </article>
+  </div>
+</Base>
