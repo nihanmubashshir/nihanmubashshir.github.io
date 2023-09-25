@@ -1,27 +1,24 @@
 ---
 import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import BlogCard from "../../components/BlogCard.astro";
 const d = await getCollection("blog");
 const linkList = d.map((entry) => {
-  return `${Astro.url}/${entry.slug}`;
+  return {
+    url: `${Astro.url}/${entry.slug}`,
+    title: entry.data.title,
+  };
 });
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BLOG</title>
-  </head>
-  <body class="bg-main">
-    <section class="min-h-screen mx-auto max-w-[1440px] px-5 md:px-14">
-      <div class="font-nextJs">
-        {
-          linkList.map((link) => {
-            return <a href={link}>Hi</a>;
-          })
+<Base>
+  <div class="container px-5 max-w-5xl mx-auto space-y-[12px] pt-11">
+    {
+      linkList.map((item) => {
+        if (item.url && item.title) {
+          return <BlogCard link={item} />;
         }
-      </div>
-    </section>
-  </body>
-</html>
+      })
+    }
+  </div>
+</Base>

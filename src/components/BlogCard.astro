@@ -1,0 +1,11 @@
+---
+const { link } = Astro.props;
+---
+
+<div
+  class="rounded-sm md:p-2 text-base font-sourceCodePro text-[#d6d6d6] bg-[#232323]"
+>
+  <div class="bg-violet-500 aspect-square w-[10px] float-right rounded-[50%]">
+  </div>
+  <a href={link.url} class="hover:text-violet-400 block w-full">{link.title}</a>
+</div>
