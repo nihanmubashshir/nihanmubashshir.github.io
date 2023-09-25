@@ -1,6 +1,7 @@
 ---
 
-title: "Test"
-description: 'HI'
+title: "Ecommerce Site"
+description: 'Building an ecommerce site from scratch.'
 ---
-write sopmething here
+# Ecommerce Site
+I have a plan of building an ecommerce site with as little library as possible.

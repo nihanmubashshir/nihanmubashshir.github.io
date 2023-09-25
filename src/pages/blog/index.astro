@@ -5,7 +5,7 @@ import BlogCard from "../../components/BlogCard.astro";
 const d = await getCollection("blog");
 const linkList = d.map((entry) => {
   return {
-    url: `${Astro.url}${entry.slug}`,
+    url: `${Astro.url}/${entry.slug}`,
     title: entry.data.title,
   };
 });
