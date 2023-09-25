@@ -19,8 +19,12 @@ const { Content, headings } = await entry.render();
 
 <!-- <TableOfContent  headings={headings} /> -->
 <Base>
-  <div class="px-4 py-5 md:py-12 md:px-0">
-    <article class="prose prose-invert font-nextjs leading-[150%] mx-auto">
+  <div
+    class="px-4 py-5 md:py-12 md:px-0 selection:bg-violet-400 selection:text-main"
+  >
+    <article
+      class="prose prose-h1:text-[28px] md:prose-h1:text-[36px] prose-lg prose-invert prose-pre:!bg-main prose-pre:border-[1px] prose-pre:border-violet-300 prose-a:text-violet-300 prose-a:no-underline hover:prose-a:underline prose-h1:text-violet-500 font-nextjs leading-[150%] mx-auto"
+    >
       <Content />
     </article>
   </div>
