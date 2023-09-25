@@ -34,5 +34,7 @@ Those classes will have methods to handle CRUD operations on those entities.
 
 The admin API will be a REST API. I am skipping the authentication layer for now. I am planning on bolting that in later.
 
+**I haven't yet decided what do with other parts of the project.**
+
 Last update: September 26, 2023.
 
