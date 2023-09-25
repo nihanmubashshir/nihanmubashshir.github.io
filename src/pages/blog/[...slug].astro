@@ -13,11 +13,12 @@ export async function getStaticPaths() {
   });
 }
 const { entry } = Astro.props;
-const { Content, headings } = await entry.render();
+const { title, description } = entry.data;
+const { Content } = await entry.render();
 ---
 
 <!-- <TableOfContent  headings={headings} /> -->
-<Base>
+<Base title={title} description={description}>
   <div
     class="px-4 py-5 md:py-12 md:px-0 selection:bg-violet-400 selection:text-main"
   >
